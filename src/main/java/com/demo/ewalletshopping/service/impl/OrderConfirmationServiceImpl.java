@@ -99,7 +99,7 @@ public class OrderConfirmationServiceImpl implements OrderConfirmationService {
 			
 			throw new WalletNotFoundException("Wallet is not found");
 		}
-		if(!(cartOptional.get().getAmount()<=walletOPtional.get().getBalance()))
+		if(!(walletOPtional.get().getBalance()>=cartOptional.get().getAmount()))
 			
 		{
 			logger.info("validating balance");

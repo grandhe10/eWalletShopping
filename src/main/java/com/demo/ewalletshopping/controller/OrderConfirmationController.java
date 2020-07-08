@@ -33,7 +33,7 @@ public class OrderConfirmationController {
 	@PostMapping("/users/{userId}/orders")
 	public  ResponseEntity<OrderResponseDto> buyAnPet(@Valid @RequestBody OrderRequestDto orderRequestDto,@PathVariable("userId") Long userId)
 	{
-		Log logger=LogFactory.getLog(OrderConfirmationController.class);
+		
 		logger.info("inside buy an pet controller");
 		return new ResponseEntity<>(orderConfirmationService.purchaseAProduct(orderRequestDto, userId), HttpStatus.OK);
 	}

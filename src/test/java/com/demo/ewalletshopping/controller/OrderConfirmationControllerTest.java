@@ -63,7 +63,18 @@ public class OrderConfirmationControllerTest {
 		user.setUserId(1L);
 		user.setUserName("lahari");
 		
-		
+		/*
+		 * when(orderConfirmationServiceImpl.purchaseAProduct(any(OrderRequestDto.class)
+		 * ,eq(1L))).thenReturn(responsedto);
+		 * mockMvc.perform(post("/users/{userId}/orders",1L).contentType(MediaType.
+		 * APPLICATION_JSON_VALUE)
+		 * .content(objectMapper.writeValueAsString(requestdto)))
+		 * .andExpect(status().isOk()) .andExpect(jsonPath("$",
+		 * Matchers.any(LinkedHashMap.class)));
+		 * 
+		 * verify(orderConfirmationServiceImpl).purchaseAProduct(any(OrderRequestDto.
+		 * class),eq(1L));
+		 */
     }
 		
 		
