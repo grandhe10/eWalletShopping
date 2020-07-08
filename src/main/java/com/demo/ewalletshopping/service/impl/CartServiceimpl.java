@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import javax.transaction.Transactional;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +26,8 @@ import com.demo.ewalletshopping.model.Product;
 import com.demo.ewalletshopping.model.User;
 import com.demo.ewalletshopping.service.CartDetailService;
 import com.demo.ewalletshopping.service.CartService;
+
+@Transactional
 @Service
 public class CartServiceimpl implements CartService{
 	
@@ -115,10 +119,23 @@ public class CartServiceimpl implements CartService{
 	
 	private double saveOrder(Long productId,Long userId,Cart cart)
 	{
+		logger.info(ApplicationConstants.LOGINFO_ORDERHISTORY_7);
 		
-		double price = cartDetailService.addToCart(productId,userId,cart);
+		return cartDetailService.addToCart(productId,userId,cart);
 		
-		return price ;
+	}
+
+	@Override
+	public void updateStatus(Long cartId) {
+	
+		Optional<Cart> cartOptional = cartDao.findByCartId(cartId);
+		
+		if(!cartOptional.isPresent())
+			
+			throw new CartNotFoundException(ApplicationConstants.CART_NOT_FOUND);
+		
+		cartOptional.get().setStatus(Status.PURCHASED);
+		cartDao.save(cartOptional.get());
 		
 	}
 	

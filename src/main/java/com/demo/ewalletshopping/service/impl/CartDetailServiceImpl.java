@@ -3,6 +3,8 @@ package com.demo.ewalletshopping.service.impl;
 import java.time.LocalDate;
 import java.util.Optional;
 
+import javax.transaction.Transactional;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,8 @@ import com.demo.ewalletshopping.model.Cart;
 import com.demo.ewalletshopping.model.CartDetail;
 import com.demo.ewalletshopping.model.Product;
 import com.demo.ewalletshopping.service.CartDetailService;
+
+@Transactional
 @Service
 public class CartDetailServiceImpl implements CartDetailService{
 

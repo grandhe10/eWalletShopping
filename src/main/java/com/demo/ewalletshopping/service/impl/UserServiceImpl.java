@@ -2,6 +2,8 @@ package com.demo.ewalletshopping.service.impl;
 
 import java.util.Optional;
 
+import javax.transaction.Transactional;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,8 @@ import com.demo.ewalletshopping.dto.LoginResponseDto;
 import com.demo.ewalletshopping.exception.UserUnauthorizedException;
 import com.demo.ewalletshopping.model.User;
 import com.demo.ewalletshopping.service.UserService;
+
+@Transactional
 @Service
 public class UserServiceImpl implements UserService{
 	

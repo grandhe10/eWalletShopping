@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import javax.transaction.Transactional;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,7 @@ import com.demo.ewalletshopping.exception.ProductNotFoundException;
 import com.demo.ewalletshopping.model.Product;
 import com.demo.ewalletshopping.service.ProductService;
 
+@Transactional
 @Service
 public class ProductServiceImpl implements ProductService{
 

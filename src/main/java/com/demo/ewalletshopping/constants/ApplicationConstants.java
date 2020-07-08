@@ -55,6 +55,7 @@ public class ApplicationConstants {
 	public static final String CART_SUCCESS = "Products added to cart successfully";
 	public static final Integer CART_SUCCESS_CODE = HttpStatus.CREATED.value();
 	public static final Object LOGINFO_ORDERHISTORY_6 = "Calculating amount of all products";
+	public static final Object LOGINFO_ORDERHISTORY_7 = "getting price and adding the product to the cart";
 	
 	
 
