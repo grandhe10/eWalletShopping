@@ -29,7 +29,7 @@ Log logger = LogFactory.getLog(ProductController.class);
 	@GetMapping("/products")
 	public ResponseEntity<ProductResponseDto> getProductList(@RequestParam("productName") String productName)
 	{
-		logger.info(ApplicationConstants.LOGINFO_PETCONTROLLER_1);
+		logger.info(ApplicationConstants.LOGINFO_PRODUCT_CONTROLLER_1);
 		return new ResponseEntity<>(productService.getProductListByName(productName),HttpStatus.OK);
 	}
 	

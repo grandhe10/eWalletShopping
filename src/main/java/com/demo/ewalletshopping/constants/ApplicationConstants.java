@@ -48,6 +48,14 @@ public class ApplicationConstants {
 	public static final Integer PRODUCT_FOUND_CODE = HttpStatus.FOUND.value();
 	public static final String PRODUCT_FOUND = "PLease find the list of products";
 	public static final Object LOGINFO_PRODUCT_3 = "Returning the productResponseDto";
+	public static final Object LOGINFO_CARTCONTROLLER_1 = "Found cartService method add products to cart";
+	public static final Object LOGINFO_PRODUCT_CONTROLLER_1 = "Found productService method getProductList";
+	public static final Object LOGINFO_CART_1 = "Enetered add cart method ";
+	public static final Object LOGINFO_CARTDETAIL_1 = "Adding productDetails to cart";
+	public static final String CART_SUCCESS = "Products added to cart successfully";
+	public static final Integer CART_SUCCESS_CODE = HttpStatus.CREATED.value();
+	public static final Object LOGINFO_ORDERHISTORY_6 = "Calculating amount of all products";
+	
 	
 
 }

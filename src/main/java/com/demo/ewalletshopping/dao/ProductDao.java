@@ -21,4 +21,13 @@ public interface ProductDao extends CrudRepository<Product, Long>{
 	 * @return List of Pets
 	 */
 	Optional<List<Product>> findByProductNameContaining(String productName);
+
+	
+	
+	/**
+	 * This method is used to fetch productDetails by product Id
+	 * @param productId
+	 * @return Product
+	 */
+	Optional<Product> findByProductId(Long productId);
 }

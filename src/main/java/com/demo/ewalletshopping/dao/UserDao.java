@@ -23,4 +23,11 @@ public interface UserDao extends CrudRepository<User, Long> {
 	 */
 	Optional<User> findByUserNameAndPassword(String userName, String password);
 
+	/**
+	 * This method is used to fetch User Details by userId
+	 * @param userId
+	 * @return User
+	 */
+	Optional<User> findByUserId(Long userId);
+
 }
