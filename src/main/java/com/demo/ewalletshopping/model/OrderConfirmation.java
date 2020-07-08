@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 /**
- * @author Suma
+ * @author Haritha
  * Generates table OrderConfirmation with orderConfirmationId,
  * cartId and orderDate
  *
@@ -23,6 +23,14 @@ public class OrderConfirmation {
 	private Long orderConfirmationId;
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	private Cart cart;
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	private User user;
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
 	private LocalDate orderDate;
 	
 	public Long getOrderConfirmationId() {
