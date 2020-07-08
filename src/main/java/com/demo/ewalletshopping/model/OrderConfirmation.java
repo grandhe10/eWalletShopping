@@ -24,6 +24,10 @@ public class OrderConfirmation {
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	private Cart cart;
 	private LocalDate orderDate;
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	private User user;
+	
+	
 	
 	public Long getOrderConfirmationId() {
 		return orderConfirmationId;
@@ -42,6 +46,12 @@ public class OrderConfirmation {
 	}
 	public void setOrderDate(LocalDate orderDate) {
 		this.orderDate = orderDate;
+	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
 	}
 	
 

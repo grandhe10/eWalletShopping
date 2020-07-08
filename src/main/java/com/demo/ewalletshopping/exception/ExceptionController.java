@@ -33,11 +33,19 @@ public class ExceptionController extends ResponseEntityExceptionHandler{
 		return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
 	}
 	
+	@ExceptionHandler(value = ProductNotFoundException.class)
+	public ResponseEntity<ErrorResponse> exception(ProductNotFoundException exception) {
+		ErrorResponse errorResponse = new ErrorResponse();
+		errorResponse.setMessage(ApplicationConstants.PRODUCT_NOT_FOUND);
+		errorResponse.setStatusCode(ApplicationConstants.PRODUCT_NOT_FOUND_CODE);
+		return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
+	}
+	
 	@ExceptionHandler(value = BalanceInsufficientException.class)
 	public ResponseEntity<ErrorResponse> exception(BalanceInsufficientException exception) {
 		ErrorResponse errorResponse = new ErrorResponse();
-		errorResponse.setMessage(ApplicationConstants.USER_NOT_FOUND);
-		errorResponse.setStatusCode(ApplicationConstants.USER_NOT_FOUND_CODE);
+		errorResponse.setMessage(ApplicationConstants.BALANCE_INSUFFICIENT);
+		errorResponse.setStatusCode(ApplicationConstants.BALANCE_INSUFFICIENT_CODE);
 		return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
 	}
 	

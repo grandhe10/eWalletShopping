@@ -40,6 +40,14 @@ public class ApplicationConstants {
 	public static final Integer CART_NOT_FOUND_CODE = 900;
 	public static final String BALANCE_INSUFFICIENT = "Please verify your balance";
 	public static final Integer BALANCE_INSUFFICIENT_CODE = 901;
+	public static final Integer PRODUCT_NOT_FOUND_CODE = 902;
+	public static final String PRODUCT_NOT_FOUND = "No products found with the requested input";
+	public static final Object LOGINFO_PRODUCT_4 = "No product found";
+	public static final Object LOGINFO_PRODUCT_1 = "Entered find products List method";
+	public static final Object LOGINFO_PRODUCT_2 = "fetching prodcuct details";
+	public static final Integer PRODUCT_FOUND_CODE = HttpStatus.FOUND.value();
+	public static final String PRODUCT_FOUND = "PLease find the list of products";
+	public static final Object LOGINFO_PRODUCT_3 = "Returning the productResponseDto";
 	
 
 }

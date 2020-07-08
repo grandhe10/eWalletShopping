@@ -1,5 +1,7 @@
 package com.demo.ewalletshopping.dao;
 
+import java.util.Optional;
+
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,5 +14,13 @@ import com.demo.ewalletshopping.model.User;
  */
 @Repository
 public interface UserDao extends CrudRepository<User, Long> {
+	
+	/**
+	 * This method is used to authenticate user
+	 * @param userName
+	 * @param password
+	 * @return User
+	 */
+	Optional<User> findByUserNameAndPassword(String userName, String password);
 
 }
