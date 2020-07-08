@@ -49,6 +49,13 @@
 		src/main/java/com/demo/ewalletshopping/service/CartDetailService.java
 		src/main/java/com/demo/ewalletshopping/service/OrderConfirmationService.java
 		src/main/java/com/demo/ewalletshopping/constants/ApplicationConstants.java
+		src/main/java/com/demo/ewalletshopping/exception/CartNotFoundException.java
+		src/main/java/com/demo/ewalletshopping/exception/BalanceInsufficientException.java
+		src/main/java/com/demo/ewalletshopping/exception/ProductNotFoundException.java
+		src/main/java/com/demo/ewalletshopping/exception/UserNotFoundException.java
+		src/main/java/com/demo/ewalletshopping/exception/UserUnauthorizedException.java
+		src/main/java/com/demo/ewalletshopping/exception/WalletNotFoundException.java
+		
 		</sonar.coverage.exclusions>
 	</properties>
 

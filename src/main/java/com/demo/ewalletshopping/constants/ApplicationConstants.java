@@ -34,5 +34,12 @@ public class ApplicationConstants {
 	public static final Object LOGINFO_USER_4 = "No pet found with the petId";
 	public static final Object LOGINFO_USER_5 = "Returning the order history of the user";
 	public static final Object LOGINFO_PETCONTROLLER_1 = "Found getPetAnimalsList method";
+	public static final String WALLET_NOT_FOUND = "Please verify your wallet credetials";
+	public static final Integer WALLET_NOT_FOUND_CODE = 800;
+	public static final String CART_NOT_FOUND = "Please verify cartId";
+	public static final Integer CART_NOT_FOUND_CODE = 900;
+	public static final String BALANCE_INSUFFICIENT = "Please verify your balance";
+	public static final Integer BALANCE_INSUFFICIENT_CODE = 901;
+	
 
 }
