@@ -1,5 +1,7 @@
 package com.demo.ewalletshopping.dao;
 
+import java.util.Optional;
+
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,5 +14,10 @@ import com.demo.ewalletshopping.model.User;
  */
 @Repository
 public interface UserDao extends CrudRepository<User, Long> {
+	/**
+	 * @param userId
+	 * @return userid
+	 */
+	Optional<User> findByUserId ( Long userId);
 
 }

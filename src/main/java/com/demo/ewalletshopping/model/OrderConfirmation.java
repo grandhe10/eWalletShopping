@@ -23,6 +23,15 @@ public class OrderConfirmation {
 	private Long orderConfirmationId;
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	private Cart cart;
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	private User user;
+	
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
 	private LocalDate orderDate;
 	
 	public Long getOrderConfirmationId() {
