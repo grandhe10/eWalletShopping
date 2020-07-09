@@ -1,5 +1,7 @@
 package com.demo.ewalletshopping.dao;
 
+import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.repository.CrudRepository;
@@ -28,6 +30,12 @@ public interface OrderConfirmationDao  extends CrudRepository<OrderConfirmation,
 	 * @return
 	 */
 	Optional<OrderConfirmation> findByCart(Cart cart);
+
+	/**
+	 * This method is used to get orders list by OrderDate and User
+	 * @return 
+	 */
+	Optional<List<OrderConfirmation>> findByOrderDateAndUser(LocalDate orderDate,User user);
 	
 
 }

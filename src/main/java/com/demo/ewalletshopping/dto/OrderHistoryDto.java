@@ -6,6 +6,7 @@ public class OrderHistoryDto {
 	private String productName;
 	private double price;
 	
+	
 	public String getProductName() {
 		return productName;
 	}
@@ -18,6 +19,8 @@ public class OrderHistoryDto {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	
+	
 	
 
 }

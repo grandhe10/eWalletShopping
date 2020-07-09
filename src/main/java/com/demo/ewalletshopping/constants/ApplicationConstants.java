@@ -56,6 +56,21 @@ public class ApplicationConstants {
 	public static final Integer CART_SUCCESS_CODE = HttpStatus.CREATED.value();
 	public static final Object LOGINFO_ORDERHISTORY_6 = "Calculating amount of all products";
 	public static final Object LOGINFO_ORDERHISTORY_7 = "getting price and adding the product to the cart";
+	public static final Object LOGINFO_ORDERCONFIRMATION_CONTROLLER_1 = "purchase product method is found";
+	public static final Object LOGINFO_ORDERCONFIRMATION_CONTROLLER_2 = "order history method is found";
+	public static final Object LOGINFO_ORDERCONFIRMATION_SERVICE_4 = "validating user ";
+	public static final Object LOGINFO_ORDERCONFIRMATION_SERVICE_5 = "No orders found";
+	public static final Object LOGINFO_ORDERCONFIRMATION_SERVICE_6 = "No cartDetail found";
+	public static final Object LOGINFO_ORDERCONFIRMATION_SERVICE_7 = "Fetching order history list from productsList";
+	public static final Object LOGINFO_ORDERCONFIRMATION_SERVICE_8 = "Getting orderHistoryDto from product";
+	public static final Object LOGINFO_ORDERCONFIRMATION_SERVICE_1 = "Balance is insufficient";
+	public static final Object LOGINFO_ORDERCONFIRMATION_SERVICE_2 = "No wallet is found with the requested credentials";
+	public static final Object LOGINFO_ORDERCONFIRMATION_SERVICE_3 = "Cart details are not found";
+	public static final String ORDERS_FOUND = "Please find the list of products you ordered";
+	public static final Integer ORDERS_FOUND_CODE = HttpStatus.FOUND.value();
+	public static final Object UPDATE_BALANCE = "Updating balance";
+	public static final Object UPDATE_STATUS = "Ypdating status of cart";
+	
 	
 	
 

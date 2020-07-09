@@ -31,15 +31,15 @@ Log logger = LogFactory.getLog(ProductServiceImpl.class);
 	public ProductResponseDto getProductListByName(String productName) {
 		
 		logger.info(ApplicationConstants.LOGINFO_PRODUCT_1);
-		Optional<List<Product>> petList = productDao.findByProductNameContaining(productName);
+		Optional<List<Product>> productList = productDao.findByProductNameContaining(productName);
 		
-		if(!petList.isPresent())	
+		if(!productList.isPresent())	
 		{
 			logger.info(ApplicationConstants.LOGINFO_PRODUCT_4);	
 			throw new ProductNotFoundException(ApplicationConstants.PRODUCT_NOT_FOUND);
 		}
 		
-		List<ProductResponse> responseList = petList.get().stream().map(this::getProductResponse).collect(Collectors.toList());
+		List<ProductResponse> responseList = productList.get().stream().map(this::getProductResponse).collect(Collectors.toList());
 		
 		ProductResponseDto productResponseDto = new ProductResponseDto();
 		
